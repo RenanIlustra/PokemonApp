@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_regular"
+    android:elevation="15dp"
+    app:cardCornerRadius="@dimen/margin_big"
+    app:cardBackgroundColor="#FEFEFE"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/layout_pokemon_item_ImgView"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/layout_pokemon_item_txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/poekmon_name"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_main_type01"
+            app:layout_constraintStart_toEndOf="@id/layout_pokemon_item_ImgView"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_type01"
+            tools:text="Charmander" />
+
+        <TextView
+            android:id="@+id/activity_main_pokemon_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_main_type02"
+            app:layout_constraintStart_toStartOf="@+id/layout_pokemon_item_txtname"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_type02"
+            tools:text="Nº 001" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/activity_main_guidelineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/activity_main_guidelinVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <TextView
+            android:id="@+id/activity_main_type01"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="#D95829"
+            android:gravity="center"
+            android:textColor="#FEFEFE"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_guidelineHorizontal"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_select"
+            tools:text="FIRE" />
+
+        <TextView
+            android:id="@+id/activity_main_type02"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:background="#D95829"
+            android:gravity="center"
+            android:textColor="#FEFEFE"
+            android:textSize="18sp"
+            android:textStyle="normal
+"
+            app:layout_constraintEnd_toEndOf="@+id/activity_main_type01"
+            app:layout_constraintStart_toStartOf="@+id/activity_main_type01"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_guidelineHorizontal"
+            tools:text="FIRE" />
+
+        <ImageView
+            android:id="@+id/imageView_select"
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:pointerIcon="arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pokemon_buttom_select"
+            android:contentDescription="Image for select buttom" />
+
+        <ImageView
+            android:id="@+id/layout_select_buttom_triangular"
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView_select"
+            app:layout_constraintTop_toTopOf="@+id/imageView_select"
+            app:srcCompat="@drawable/ic_arrow_triangular_left"
+            android:contentDescription="triangular image" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
