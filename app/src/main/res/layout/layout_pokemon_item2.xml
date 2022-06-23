@@ -38,6 +38,7 @@
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/layout_type01"
+            app:layout_constraintEnd_toStartOf="@+id/activity_main_guidelinVertical"
             app:layout_constraintStart_toEndOf="@id/layout_pokemon_item_ImgView"
             app:layout_constraintTop_toTopOf="@+id/layout_type01"
             tools:text="Charmander" />
@@ -50,6 +51,7 @@
             android:textColor="@android:color/darker_gray"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/layout_type02"
+            app:layout_constraintEnd_toStartOf="@+id/activity_main_guidelinVertical"
             app:layout_constraintStart_toStartOf="@+id/layout_pokemon_item_txtname"
             app:layout_constraintTop_toTopOf="@+id/layout_type02"
             tools:text="Nº 001" />
@@ -81,6 +83,8 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/activity_main_guidelineHorizontal"
             app:layout_constraintEnd_toStartOf="@+id/imageView_select"
+            app:layout_constraintStart_toStartOf="@+id/activity_main_guidelinVertical"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="FIRE" />
 
         <TextView
@@ -94,6 +98,7 @@
             android:textSize="18sp"
             android:textStyle="normal
 "
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/layout_type01"
             app:layout_constraintStart_toStartOf="@+id/layout_type01"
             app:layout_constraintTop_toTopOf="@+id/activity_main_guidelineHorizontal"
