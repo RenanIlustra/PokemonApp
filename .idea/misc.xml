@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rsilva/AndroidStudioProjects/PokemonApp/app/src/main/res/drawable/pokemon_buttom_select.xml" value="0.196" />
         <entry key="..\:/Users/rsilva/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/activity_main_list.xml" value="0.33" />
         <entry key="..\:/Users/rsilva/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/layout_pokemon_item.xml" value="0.25" />
-        <entry key="..\:/Users/rsilva/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/layout_pokemon_item2.xml" value="0.33" />
+        <entry key="..\:/Users/rsilva/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/layout_pokemon_item2.xml" value="0.5389369592088998" />
       </map>
     </option>
   </component>

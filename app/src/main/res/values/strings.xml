@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Pokemon App</string>
-    <string name="poekmon_name">TextView</string>
+    <string name="poekmon_name"></string>
 </resources>

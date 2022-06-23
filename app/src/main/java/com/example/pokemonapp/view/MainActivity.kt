@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         val bulbasaur = Pokemon(
             imgUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-            name = "Bulbasaur",
-            number = 1,
-            types = listOf(PokemonType("Planta"))
+            name = "Bulbasour",
+            number = 115,
+            types = listOf(PokemonType("GRASS"))
         )
-        val pokemons = listOf(bulbasaur,bulbasaur,bulbasaur,bulbasaur)
+        val pokemons = listOf(bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur)
 
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager

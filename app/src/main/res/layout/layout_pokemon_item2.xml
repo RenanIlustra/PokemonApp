@@ -19,8 +19,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/layout_tvPokemon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_tvType01"
+            app:layout_constraintEnd_toStartOf="@+id/activity_main_guidelinVertical"
+            app:layout_constraintStart_toEndOf="@+id/layout_ivPokemon"
+            app:layout_constraintTop_toTopOf="@+id/layout_tvType01"
+            tools:text="Bulbasour"/>
+
+        <TextView
+            android:id="@+id/layout_tvPokemon_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_tvType02"
+            app:layout_constraintStart_toStartOf="@+id/layout_tvPokemon_name"
+            app:layout_constraintTop_toTopOf="@+id/layout_tvType02"
+            tools:text="Nº 001" />
+
         <ImageView
-            android:id="@+id/layout_pokemon_item_ImgView"
+            android:id="@+id/layout_ivPokemon"
             android:layout_width="100dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -28,33 +53,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/layout_pokemon_item_txtname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_small"
-            android:text="@string/poekmon_name"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/layout_type01"
-            app:layout_constraintEnd_toStartOf="@+id/activity_main_guidelinVertical"
-            app:layout_constraintStart_toEndOf="@id/layout_pokemon_item_ImgView"
-            app:layout_constraintTop_toTopOf="@+id/layout_type01"
-            tools:text="Charmander" />
-
-        <TextView
-            android:id="@+id/layout_pokemon_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_small"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="@+id/layout_type02"
-            app:layout_constraintEnd_toStartOf="@+id/activity_main_guidelinVertical"
-            app:layout_constraintStart_toStartOf="@+id/layout_pokemon_item_txtname"
-            app:layout_constraintTop_toTopOf="@+id/layout_type02"
-            tools:text="Nº 001" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/activity_main_guidelineHorizontal"
@@ -71,27 +69,29 @@
             app:layout_constraintGuide_percent="0.65" />
 
         <TextView
-            android:id="@+id/layout_type01"
+            android:id="@+id/layout_tvType01"
             android:layout_width="90dp"
             android:layout_height="35dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="4dp"
-            android:background="#D95829"
+            android:background="#3C8D40"
             android:gravity="center"
             android:textColor="#FEFEFE"
             android:textSize="18sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/activity_main_guidelineHorizontal"
-            app:layout_constraintEnd_toStartOf="@+id/imageView_select"
+            app:layout_constraintEnd_toStartOf="@+id/layout_ivSelect"
             app:layout_constraintStart_toStartOf="@+id/activity_main_guidelinVertical"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="FIRE" />
+            tools:text="GRASS" />
 
         <TextView
-            android:id="@+id/layout_type02"
+            android:id="@+id/layout_tvType02"
             android:layout_width="90dp"
             android:layout_height="35dp"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
             android:background="#D95829"
             android:gravity="center"
             android:textColor="#FEFEFE"
@@ -99,13 +99,13 @@
             android:textStyle="normal
 "
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/layout_type01"
-            app:layout_constraintStart_toStartOf="@+id/layout_type01"
+            app:layout_constraintEnd_toEndOf="@+id/layout_tvType01"
+            app:layout_constraintStart_toStartOf="@+id/layout_tvType01"
             app:layout_constraintTop_toTopOf="@+id/activity_main_guidelineHorizontal"
             tools:text="FIRE" />
 
         <ImageView
-            android:id="@+id/imageView_select"
+            android:id="@+id/layout_ivSelect"
             android:layout_width="25dp"
             android:layout_height="0dp"
             android:pointerIcon="arrow"
@@ -120,10 +120,10 @@
             android:layout_width="32dp"
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView_select"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_ivSelect"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView_select"
-            app:layout_constraintTop_toTopOf="@+id/imageView_select"
+            app:layout_constraintStart_toStartOf="@+id/layout_ivSelect"
+            app:layout_constraintTop_toTopOf="@+id/layout_ivSelect"
             app:srcCompat="@drawable/ic_arrow_triangular_left"
             android:contentDescription="triangular image" />
 
