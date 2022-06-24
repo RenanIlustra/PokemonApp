@@ -49,7 +49,7 @@ class PokemonAdapter(
             Glide.with(itemView.context).load(item.imgUrl).into(ivPokemon)
 
             tvName.text = item.name
-            tvNumber.text = "Nº ${item.number}"
+            tvNumber.text = "Nº ${item.formattedNumber}"
             tvType1.text = item.types[0].typeName
             if (item.types.size > 1) {
                 tvType2.visibility = View.VISIBLE
