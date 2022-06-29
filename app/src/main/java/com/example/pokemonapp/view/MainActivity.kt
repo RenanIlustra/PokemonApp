@@ -2,9 +2,12 @@ package com.example.pokemonapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonapp.R
+import com.example.pokemonapp.api.PokemonRepository
+import com.example.pokemonapp.api.models.PokemonResult
 import com.example.pokemonapp.databinding.ActivityMainListBinding
 import com.example.pokemonapp.databinding.LayoutPokemonItem2Binding
 import com.example.pokemonapp.domain.Pokemon
@@ -31,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             types = listOf(PokemonType("GRASS"))
         )
         val pokemons = listOf(bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur)
+
+        val pokemonsApi =PokemonRepository.listPokemons()
+
+        Log.d("POKEMON_API",pokemonsApi.toString() )
 
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
