@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 //https://pokeapi.co/api/v2/pokemon?limit=151
-interface PokemonServices {
+interface PokemonServicesX {
     @GET("pokemon")
     fun listPokemons(@Query("limit") limit: Int): Call<List<PokemonsApiResult>>
 

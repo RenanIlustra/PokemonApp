@@ -1,6 +1,6 @@
 package com.example.pokemonapp.api
 
-import com.example.pokemonapp.X.apiX.PokemonServices
+import com.example.pokemonapp.X.apiX.PokemonServicesX
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -13,7 +13,8 @@ object RetrofitServices {
             .build()
     }
 
-    val api:PokemonServices by lazy {
-        retrofit.create(PokemonServices::class.java)
+    val api:PokemonServicesX by lazy {
+        retrofit.create(PokemonServices::class.java) // trocar o tipo para  PokemonServices
+        retrofit.create(PokemonServicesX::class.java)
     }
 }
