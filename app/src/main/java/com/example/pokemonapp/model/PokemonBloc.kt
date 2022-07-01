@@ -1,6 +1,6 @@
 package com.example.pokemonapp.model
 
-data class ApiBlocResult (
+data class PokemonBloc (
     val count: Int,
     val next: String?,
     val previous: String?,
