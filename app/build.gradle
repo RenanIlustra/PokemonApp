@@ -42,9 +42,14 @@ dependencies {
     //Retrofit - Biblioteca para requisições REST
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
     //GSON - Deserializa JSON
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0-M1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0-M1'
+    
     //Glide - Biblioteca para carregamento das imagens
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.12.0'

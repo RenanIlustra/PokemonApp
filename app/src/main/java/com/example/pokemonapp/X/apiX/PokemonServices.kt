@@ -1,8 +1,7 @@
-package com.example.pokemonapp.api
+package com.example.pokemonapp.X.apiX
 
-import com.example.pokemonapp.api.models.IndividualPokemonApiResult
-import com.example.pokemonapp.api.models.PokemonResult
-import com.example.pokemonapp.api.models.PokemonsApiResult
+import com.example.pokemonapp.X.apiX.models.IndividualPokemonApiResult
+import com.example.pokemonapp.X.apiX.models.PokemonsApiResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

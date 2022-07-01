@@ -1,17 +1,14 @@
-package com.example.pokemonapp.view
+package com.example.pokemonapp.X.viewX
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonapp.R
-import com.example.pokemonapp.api.PokemonRepository
-import com.example.pokemonapp.api.models.PokemonResult
-import com.example.pokemonapp.databinding.ActivityMainListBinding
-import com.example.pokemonapp.databinding.LayoutPokemonItem2Binding
-import com.example.pokemonapp.domain.Pokemon
-import com.example.pokemonapp.domain.PokemonType
+import com.example.pokemonapp.api.Repository
+import com.example.pokemonapp.model.Pokemon
+import com.example.pokemonapp.model.PokemonType
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,16 +28,34 @@ class MainActivity : AppCompatActivity() {
             imgUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
             name = "Bulbasour",
             number = 115,
+            url ="",
             types = listOf(PokemonType("GRASS"))
         )
         val pokemons = listOf(bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur,bulbasaur)
 
-        val pokemonsApi =PokemonRepository.listPokemons()
+        //Função para teste sem usar o Corrotines do Retrofit
+        Thread(Runnable {
 
-        Log.d("POKEMON_API",pokemonsApi.toString() )
+        }).start()
 
-        val linearLayoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = linearLayoutManager
-        recyclerView.adapter = PokemonAdapter(pokemons)
+        loadPokemons(recyclerView, pokemons)
+
+
     }
+
+    private fun loadPokemons(
+        recyclerView: RecyclerView,
+        pokemons: List<Pokemon>
+    ) {
+        val pokemonsApiResult = Repository.listPokemons()
+
+       pokemonsApiResult.let {
+           val linearLayoutManager = LinearLayoutManager(this)
+           recyclerView.layoutManager = linearLayoutManager
+           recyclerView.adapter = PokemonAdapter(pokemons)
+       }
+
+    }
+
+
 }

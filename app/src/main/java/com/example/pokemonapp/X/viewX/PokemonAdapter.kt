@@ -1,4 +1,4 @@
-package com.example.pokemonapp.view
+package com.example.pokemonapp.X.viewX
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pokemonapp.R
-import com.example.pokemonapp.domain.Pokemon
+import com.example.pokemonapp.model.Pokemon
 
 class PokemonAdapter(
     val items: List<Pokemon>

@@ -1,19 +1,15 @@
-package com.example.pokemonapp.api.models
+package com.example.pokemonapp.X.apiX.models
 
-import com.example.pokemonapp.domain.PokemonType
-import java.net.IDN
+import com.example.pokemonapp.model.Pokemon
+import com.example.pokemonapp.model.PokemonType
 
 data class PokemonsApiResult(
     val count: Int,
     val next: String?,
     val previous: String?,
-    val results: List<PokemonResult>
+    val results: List<Pokemon>
 )
 
-data class PokemonResult(
-    val name: String,
-    val url: String
-)
 
 data class IndividualPokemonApiResult(
     val id: Int,
