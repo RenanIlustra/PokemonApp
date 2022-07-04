@@ -13,8 +13,7 @@ object RetrofitServices {
             .build()
     }
 
-    val api:PokemonServicesX by lazy {
-        retrofit.create(PokemonServices::class.java) // trocar o tipo para  PokemonServices
-        retrofit.create(PokemonServicesX::class.java)
+    val api:PokemonServices by lazy {
+        retrofit.create(PokemonServices::class.java)
     }
 }

@@ -43,11 +43,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loadPokemons(
+    private suspend fun loadPokemons(
         recyclerView: RecyclerView,
         pokemons: List<Pokemon>
     ) {
-        val pokemonsApiResult = Repository.listPokemons()
+        val pokemonsApiResult = Repository.getPokemon(5)
 
        pokemonsApiResult.let {
            val linearLayoutManager = LinearLayoutManager(this)

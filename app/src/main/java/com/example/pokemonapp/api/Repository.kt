@@ -4,19 +4,19 @@ import com.example.pokemonapp.X.apiX.PokemonServicesX
 import com.example.pokemonapp.X.apiX.models.IndividualPokemonApiResult
 import com.example.pokemonapp.X.apiX.models.PokemonsApiResult
 import com.example.pokemonapp.model.PokemonBlocList
+import com.example.pokemonapp.model.SinglePokemon
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
 object Repository {
 
-    fun listPokemons(limit: Int = 151): PokemonBlocList {
-        return RetrofitServices.api.listPokemons()
+    suspend fun listPokemons(limit: Int = 151): PokemonBlocList {
+        return RetrofitServices.api.listPokemons(limit)
     }
 
-    fun getPokemon(number: Int): List<IndividualPokemonApiResult>? {
-        val call = RetrofitServices.api.getPokemon(number)
+    suspend fun getPokemon(number: Int): List<SinglePokemon> {
 
-        return call.execute().body()
+        return RetrofitServices.api.getPokemon(number)
     }
 }
 
