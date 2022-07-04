@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         }).start()
 
-        loadPokemons(recyclerView, pokemons)
+//        loadPokemons(recyclerView, pokemons)
 
 
     }
