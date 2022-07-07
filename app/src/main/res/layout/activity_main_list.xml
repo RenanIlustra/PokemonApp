@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF0F6"
-    tools:context=".X.viewX.MainActivity">
+    tools:context=".ui.ActivityMain">
 
     <ImageView
         android:id="@+id/activity_main_imgView"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_begin="183dp" />
 
     <LinearLayout
         android:id="@+id/activity_main_linearLayout_buttons"
@@ -82,23 +82,15 @@
             android:text="movies" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/activity_main_frame"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_main_linearLayout_buttons">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPokemons"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/layout_pokemon_item2" />
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvPokemons"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:listitem="@layout/layout_pokemon_item2" />-->
 
-    </FrameLayout>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -111,5 +103,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="#373333"
         app:srcCompat="@drawable/ic_add" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_app"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_linearLayout_buttons"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
